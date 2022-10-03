@@ -9,58 +9,40 @@ namespace UnitTestingExercise.Tests
         [InlineData(2, 3, 5, 10)] //Add test data <-------
         public void AddTest(int num1, int num2, int num3, int expected)
         {
-            //Start Step 3 here:
-
-            //Arrange
-            // create a Calculator object
-            
-
-            //Act
-                // call the Add method that is located in the Calculator class
-                // and store its result in a variable named actual
-
-            //Assert
-                //Assert.Equal(expected, actual);
+            Calculator obj = new Calculator();
+           var actual =  obj.Add(num1, num2, num3);
+            Assert.Equal(expected, actual);
         }
 
         [Theory]
-        [InlineData()]//Add test data <-------
+        [InlineData(7, 2, 5)]//Add test data <-------
         public void SubtractTest(int minuend, int subtrhend, int expected)
         {
             //Start Step 5 here:
 
-            //Arrange
-
-            //Act
-
-            //Assert
+            Calculator obj1 = new Calculator();
+           var actual =  obj1.Subtract(minuend, subtrhend);
+            Assert.Equal(expected, actual);
 
         }
 
         [Theory]
-        [InlineData()]//Add test data <-------
+        [InlineData(2,2,4)]//Add test data <-------
         public void MultiplyTest(int num1, int num2, int expected)
         {
-            //Start Step 7 here:
-
-            //Arrange
-
-            //Act
-
-            //Assert
+            Calculator obj = new Calculator();
+            var actual = obj.Multiply(num1, num2);
+            Assert.Equal(expected, actual);
 
         }
 
         [Theory]
-        [InlineData()]//Add test data <-------
+        [InlineData(2,2,1)]//Add test data <-------
         public void DivideTest(int num1, int num2, int expected)
         {
-            //Arrange
-
-            //Act
-
-            //Assert
-
+            Calculator obj = new Calculator();
+            var actual = obj.divide(num1 , num2);
+            Assert.Equal(expected, actual);
         }
 
     }
